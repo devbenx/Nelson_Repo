@@ -93,7 +93,9 @@ const Home: NextPage = () => {
                                 console.log(`Main Product API call response: ${res.data.data}`);
                                 setProduct(res.data.data.attributes);
                                 setProductId(res.data.data.id);
-                                setPageState(PageState.LOADED)
+                                if (Product != undefined) {
+                                        setPageState(PageState.LOADED)
+                                }
                         })
                         .catch(err => setPageState(PageState.ERROR));
         }, [])
