@@ -21,7 +21,7 @@ const Slider: FunctionComponent<{ mediaImages: Media[] }> = ({ mediaImages }) =>
                         navigation
                         loop={true}
                         pagination={{ clickable: true }}>
-                        {mediaImages.map((image, index) => {
+                        {mediaImages && mediaImages.map((image, index) => {
                                 return <SwiperSlide key={index} ><img alt='img' src={mediaImages[index].image_sizes.original} className={styles.SlideImage} /></SwiperSlide>
                         })}
                 </Swiper>
