@@ -25,7 +25,7 @@ const DisplayModal: FunctionComponent<{ openModal: boolean, setOpenModal: React.
                 if (openModal) {
                         console.log(`Opening modal ${openModal}`);
                         console.log(`Opening modal for id ${product.id}`);
-                        axios.get(`https://nelson-repo.vercel.app/api/product/cross_selling_products/${product.id}`)
+                        axios.get(`http://localhost:3000/api/product/cross_selling_products/${product.id}`)
                                 .then(res => {
                                         console.log('Display Modal API call response: loading...')
                                         setCrossSellingProducts(res.data.data.hits);

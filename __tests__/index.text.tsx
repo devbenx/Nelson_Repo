@@ -1,5 +1,5 @@
 import { getData } from '../pages/api/product/product';
-import { server, rest } from "../pages/testServer/testServer";
+import { server, rest } from "../testServer/testServer";
 
 const mockedJSON = { data: { id: 83299, name: 'Shoes', brand: 'Van Lier' } };
 
