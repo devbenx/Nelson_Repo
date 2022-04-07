@@ -8,8 +8,8 @@ type Data = {
   api_response: IGetProductResponse
 }
 
-export const getData = (url: string) => {
-  return axios.get(url)
+export const getData = async (url: string) => {
+  return await axios.get(url)
     .then(response => {
       // console.log(response.data)
       return response.data

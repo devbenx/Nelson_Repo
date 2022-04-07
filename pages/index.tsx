@@ -88,7 +88,6 @@ const Home: NextPage = () => {
         useEffect(() => {
                 const product_id = 362950;
                 // axios.get(`http://localhost:3000/api/product/product`)
-                // console.log(process.env.API_KEY);
                 axios.get('/api/product/product')
                         .then(res => {
                                 console.log(`Main Product API call response: ${res.data.data}`);
@@ -116,7 +115,7 @@ const Home: NextPage = () => {
                         {pageState === PageState.LOADED &&
                                 <main className={styles.Container}>
                                         <NavigationBar />
-                                        <Slider mediaImages={Product!.media} />
+                                        <Slider mediaImages={Product.media} />
                                         <p className={styles.brandName}>{Product!.brand.attributes.name}</p> {/* Brand Name */}
                                         <p>{Product!.product_classification} - {Product!.product_attributes[0].value}</p> {/* name - Color */}
                                         <p>{Product!.price.attributes.available_max_regular_price_excl_vat.amount}</p> {/* Price name */}
