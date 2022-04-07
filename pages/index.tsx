@@ -86,9 +86,9 @@ const Home: NextPage = () => {
         }
 
         useEffect(() => {
-                // const product_id = 362950;
-
-                axios.get(`http://localhost:3000/api/product/product`)
+                const product_id = 362950;
+                // axios.get(`http://localhost:3000/api/product/product`)
+                axios.get(`http://dump.dataplatform.shoes/20201005_frontend_assignment/prod_details_${product_id}.json`)
                         .then(res => {
                                 console.log(`Main Product API call response: ${res.data.data}`);
                                 setProduct(res.data.data.attributes);
