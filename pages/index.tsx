@@ -86,7 +86,7 @@ const Home: NextPage = () => {
         }
 
         useEffect(() => {
-                const product_id = 362950;
+                // const product_id = 362950;
 
                 axios.get(`https://nelson-repo.vercel.app/api/product/product`)
                         .then(res => {
