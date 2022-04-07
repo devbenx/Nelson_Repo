@@ -1,0 +1,21 @@
+.Container{
+        display: flex;
+        justify-content: space-between;
+        height: min(10vh, 3rem);
+}
+
+.Logo{
+        display: flex;
+        /* flex: 1 1 1%; */
+        width: 22vw;
+}
+
+.Icons{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+}
+.Icons img{
+        height: 65%;
+        margin: 0;
+}
