@@ -87,7 +87,7 @@ const DisplayModal: FunctionComponent<{ openModal: boolean, setOpenModal: React.
                                         <section>
                                                 {crossSellingProducts?.map((item, index) => {
                                                         return <section key={`sec${index}`} className={styles.crossSellingItem}>
-                                                                <img key={`img${index}`} alt='img' src={item.attributes.product.attributes.main_image.image_sizes.small} />
+                                                                <img key={`img${index}`} alt='img' src={item.attributes.product.attributes.main_image.image_sizes.medium} />
                                                                 <div key={`div${index}`}>
                                                                         <p key={`p1${index}`}>{item.attributes.product.attributes.name}</p>
                                                                         <p key={`p2${index}`}>{item.attributes.product.attributes.product_classification}</p>
