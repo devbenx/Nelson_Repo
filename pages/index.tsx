@@ -88,7 +88,7 @@ const Home: NextPage = () => {
         useEffect(() => {
                 const product_id = 362950;
 
-                axios.get(`http://localhost:3000/api/product/product`)
+                axios.get(`https://nelson-repo.vercel.app/api/product/product`)
                         .then(res => {
                                 console.log(`Main Product API call response: ${res.data.data}`);
                                 setProduct(res.data.data.attributes);
