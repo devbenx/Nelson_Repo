@@ -115,7 +115,7 @@ const Home: NextPage = () => {
                         {pageState === PageState.LOADED &&
                                 <main className={styles.Container}>
                                         <NavigationBar />
-                                        <Slider mediaImages={Product.media} />
+                                        <Slider mediaImages={Product!.media} />
                                         <p className={styles.brandName}>{Product!.brand.attributes.name}</p> {/* Brand Name */}
                                         <p>{Product!.product_classification} - {Product!.product_attributes[0].value}</p> {/* name - Color */}
                                         <p>{Product!.price.attributes.available_max_regular_price_excl_vat.amount}</p> {/* Price name */}
