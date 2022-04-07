@@ -1,3 +1,27 @@
+## NELSON ASSIGNMENT
+
+## TASKS:
+
+- focus on users of a mobile device; &#10003;
+- support products with different ‘structures’. Products of a PARENT/CHILD structure require the user to first select on or more options (e.g. size) before the item can be added to the basket, STANDALONE products can be added to the basket directly; &#10003;
+take into account which data is provided by the API (see the links in the previous section); &#10003;
+- take into account that we can only offer complementary products for a small percentage of the products in the catalogue once the cross-sell feature launches;
+make it easy for customers to add a product to the cart in a cross-selling scenario while not blocking users from converting. &#10003;
+- A page that implements a ‘dummy’ add-to-cart buttons which triggers the add-to-cart confirmation modal &#10003;
+- Fetching of the provided sample data via XHR and using the data to populate different aspects of the interface &#10003;
+- A cross-sell interaction for both a CHILD and STANDALONE product, i.e. selecting a cross-sell item simulating adding it to the basket () &#10003;
+- Unit tests for (some) of the most critical functionality (e.g. opening the modal, fetching products for cross-selling, selecting a CHILD). &#10003;
+
+## ABOUT THE ASSIGNMENT:
+- [Live demo](https://nelson-repo.vercel.app/)
+- Built with Next.js using React.js, TypeScript & Jest (for testing).
+- Some dependencies: Swiper, Axios, Mock Service Worker.
+- 
+
+
+
+___________________
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
