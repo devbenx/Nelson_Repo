@@ -29,14 +29,14 @@ enum PageState {
         ERROR = 'ERROR',
 };
 
-const Home: NextPage = () => {
+const Home: NextPage<{ response_product: Attributes }> = ({ response_product }) => {
 
         // Page Set Up
         const [pageState, setPageState] = useState<PageState>(PageState.LOADING);
 
         // Product Set Up
         const [productId, setProductId] = useState();
-        const [Product, setProduct] = useState<Attributes>();
+        const [Product, setProduct] = useState<Attributes>(response_product);
         const [selectedProduct, setSelectedProduct] = useState<ISelectedProduct>();
 
         // Basket Set Up
@@ -194,8 +194,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
         // Pass data to the page via props
         return {
-                props: {
-                        product: response_product,
-                }
+                props: { response_product }
         }
 }
