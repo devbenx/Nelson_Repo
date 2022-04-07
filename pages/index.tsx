@@ -29,14 +29,14 @@ enum PageState {
         ERROR = 'ERROR',
 };
 
-const Home: NextPage<{ response_product: Attributes }> = ({ response_product }) => {
+const Home: NextPage = () => {
 
         // Page Set Up
         const [pageState, setPageState] = useState<PageState>(PageState.LOADING);
 
         // Product Set Up
         const [productId, setProductId] = useState();
-        const [Product, setProduct] = useState<Attributes>(response_product);
+        const [Product, setProduct] = useState<Attributes>();
         const [selectedProduct, setSelectedProduct] = useState<ISelectedProduct>();
 
         // Basket Set Up
@@ -91,11 +91,11 @@ const Home: NextPage<{ response_product: Attributes }> = ({ response_product }) 
                 axios.get('/api/product/product')
                         .then(res => {
                                 console.log(`Main Product API call response: ${res.data.data}`);
-                                setProduct(res.data.data.attributes);
-                                setProductId(res.data.data.id);
-                                if (Product != undefined) {
-                                        setPageState(PageState.LOADED)
-                                }
+                                // setProduct(res.data.data.attributes);
+                                // setProductId(res.data.data.id);
+                                // if (Product != undefined) {
+                                //         setPageState(PageState.LOADED)
+                                // }
                         })
                         .catch(err => setPageState(PageState.ERROR));
         }, [])
@@ -117,7 +117,7 @@ const Home: NextPage<{ response_product: Attributes }> = ({ response_product }) 
                         {pageState === PageState.LOADED &&
                                 <main className={styles.Container}>
                                         <NavigationBar />
-                                        <Slider mediaImages={Product!.media} />
+                                        {/* <Slider mediaImages={Product!.media} /> */}
                                         <p className={styles.brandName}>{Product!.brand.attributes.name}</p> {/* Brand Name */}
                                         <p>{Product!.product_classification} - {Product!.product_attributes[0].value}</p> {/* name - Color */}
                                         <p>{Product!.price.attributes.available_max_regular_price_excl_vat.amount}</p> {/* Price name */}
@@ -186,9 +186,9 @@ export default Home
 // This gets called on every request
 export const getServerSideProps: GetServerSideProps = async (context) => {
         // Fetch JSON for Displaying product
-        // const product_id = 362950;
+        const product_id = 362950;
 
-        const request_mainproduct = await fetch(`http://localhost:3000/api/product/product`)
+        const request_mainproduct = await fetch(`http://dump.dataplatform.shoes/20201005_frontend_assignment/cross_sell_products_for_${product_id}.json`);
 
         const response_product = await request_mainproduct.json() // response
 
