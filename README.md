@@ -13,7 +13,7 @@ make it easy for customers to add a product to the cart in a cross-selling scena
 - Unit tests for (some) of the most critical functionality (e.g. opening the modal, fetching products for cross-selling, selecting a CHILD). &#10003;
 
 ## ABOUT THE ASSIGNMENT:
-- [Live demo]
+- [Live demo](https://nelson-repo.vercel.app/)
 - Built with Next.js using React.js, TypeScript & Jest (for testing).
 - Some dependencies: Swiper, Axios, Mock Service Worker.
 - 
